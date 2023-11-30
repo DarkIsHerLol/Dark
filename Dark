@@ -1,0 +1,12 @@
+from flask import Flask
+import random
+app = Flask(name)
+
+@app.route("/random")
+def hello_world():
+    list = ['орёл','решка']
+    return f'<p>{random.choice(list)}</p>'
+@app.route('/')
+def f():
+    return '<a href="/random">Кинь монету</a>'
+app.run(debug=True)
